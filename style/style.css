@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -84,6 +85,7 @@ header {
   overflow: hidden;
   -webkit-animation: header-load var(--load-time) ease-in;
           animation: header-load var(--load-time) ease-in;
+  box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.44);
 }
 
 @-webkit-keyframes header-load {
@@ -142,12 +144,12 @@ header {
 .menu-nav {
   -webkit-animation: menu-nav;
           animation: menu-nav;
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -173,22 +175,22 @@ header {
 .nav-user {
   -webkit-animation: nav-user;
           animation: nav-user;
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  transform: translateX(200%);
+  transform: translateX(300%);
   opacity: 0;
 }
 
 @-webkit-keyframes nav-user {
   0% {
     opacity: 0;
-    transform: translateX(200%);
+    transform: translateX(300%);
   }
   100% {
     opacity: 1;
@@ -199,7 +201,7 @@ header {
 @keyframes nav-user {
   0% {
     opacity: 0;
-    transform: translateX(200%);
+    transform: translateX(300%);
   }
   100% {
     opacity: 1;
@@ -213,13 +215,18 @@ header {
 .navigation a {
   color: var(--bg-color);
   cursor: pointer;
+  list-style: none;
+  text-decoration: none;
 }
-.navigation .nav-link:hover {
+.navigation .link:hover {
   color: var(--btn-color);
 }
-.navigation .nav-link:focus {
+.navigation .link:focus {
   color: var(--btn-color);
   font-weight: 700;
+}
+.navigation .active-page {
+  color: var(--btn-color);
 }
 
 .hero {
@@ -872,7 +879,7 @@ ul {
 footer {
   height: 30em;
   background-color: var(--primary-color);
-  padding: 1em;
+  padding: 5em 0 1em 0;
 }
 footer ul, footer li, footer a {
   margin: 0;

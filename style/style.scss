@@ -3,7 +3,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -84,6 +84,7 @@ header {
     z-index: 999;
     overflow: hidden;
     animation: header-load var(--load-time) ease-in;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.44);
 }
 @keyframes header-load {
     0% {
@@ -115,9 +116,9 @@ header {
 }
 .menu-nav {
     animation: menu-nav;
-    animation-duration: 1.2s;
+    animation-duration: .5s;
     animation-timing-function: ease-in;
-    animation-delay: .9s;
+    animation-delay: .5s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -129,26 +130,27 @@ header {
         opacity: 1;
     }
 }
-// end loading
+
 .nav-user {
     animation: nav-user;
-    animation-duration: 1.2s;
+    animation-duration: .8s;
     animation-timing-function: ease-in;
     animation-delay: .9s;
     animation-fill-mode: forwards;
-    transform: translateX(200%);
+    transform: translateX(300%);
     opacity: 0;
 }
 @keyframes nav-user {
     0% {
         opacity: 0;
-        transform: translateX(200%);
+        transform: translateX(300%);
     }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
+// end loading
 
 
 .navigation {
@@ -159,15 +161,21 @@ header {
     a {
         color: var(--bg-color);
         cursor: pointer;
+        list-style: none;
+        text-decoration: none;
     }
 
-    .nav-link:hover {
+    .link:hover {
         color: var(--btn-color);
+        
     }
 
-    .nav-link:focus {
+    .link:focus {
         color: var(--btn-color);
         font-weight: 700;
+    }
+    .active-page  {
+        color: var(--btn-color) ;
     }
 
 }
@@ -871,7 +879,7 @@ ul {
 footer {
     height: 30em;
     background-color: var(--primary-color);
-    padding: 1em;
+    padding: 5em 0 1em 0;
     
     ul,li, a {
         margin: 0;
