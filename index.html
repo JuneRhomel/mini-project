@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <!-- style -->
     <link rel="stylesheet" href="/style/style.css">
     <!-- insaniburger -->
     <link href="http://fonts.cdnfonts.com/css/insaniburger" rel="stylesheet">
@@ -62,56 +62,57 @@
                 </button>
 
                 <div class="collapse 
-                navbar-collapse  
-                m-0 " id="navbarNav">
-                    <ul class="navbar-nav 
-                    me-auto 
-                    mb-2
-                    gap-4 
-                    mb-lg-0
-                    text-center">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Our Menu</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#">Event</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#">Fanchising</a>
-                        </li>
-                    </ul>
-
-                    <div class="d-lg-block">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
+                    navbar-collapse  
+                    m-0 " id="navbarNav">
+                        <ul class="navbar-nav menu-nav 
+                        me-auto 
+                        mb-2
+                        gap-4 
+                        mb-lg-0
+                        text-center">
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                    <i class="fa-regular fa-heart fs-3"></i>
-                                    <samp>(0)</samp>
-                                </a>
-
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
                             </li>
-
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Our Menu</a>
+                            </li>
                             <li class="nav-item ">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                    <i class="fa-solid fa-cart-shopping  fs-3"></i>
-                                    <samp>(0)</samp>
-                                </a>
+                                <a class="nav-link" href="#">Event</a>
                             </li>
-
                             <li class="nav-item">
-                                <a href="#" class="p-0 nav-link d-flex align-items-center justify-content-center">
-                                    <img src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
-                                </a>
+                                <a class="nav-link " href="#">Contact</a>
                             </li>
-
+                            <li class="nav-item">
+                                <a class="nav-link " href="#">Fanchising</a>
+                            </li>
                         </ul>
-                    </div>
+
+                        <div class="d-lg-block nav-user">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                        <i class="fa-regular fa-heart fs-3"></i>
+                                        <samp>(0)</samp>
+                                    </a>
+
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                        <i class="fa-solid fa-cart-shopping  fs-3"></i>
+                                        <samp>(0)</samp>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="p-0 nav-link d-flex align-items-center justify-content-center">
+                                        <img src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -188,6 +189,9 @@
                 </figure>
             </div>
         </div>
+
+        
+
     </section>
 
     <section class="partner-section ">
@@ -635,7 +639,7 @@
     </section>
 
     <footer>
-        <div class="container d-flex justify-content-around h-100">
+        <div class="container d-flex justify-content-center justify-content-lg-between p-0 h-100">
             <nav class="nav-left">
                 <h3>Quick Links</h3>
                 <ul class="d-flex flex-column gap-3">
@@ -683,6 +687,48 @@
             </nav>
         </div>
     </footer>
+
+<!-- pop up Message -->
+    <div class="message-flex">
+        <div class="chat" id="chat">
+            <div class="chat-head" >
+                <h5>Chat Assistance</h5>
+                <button onclick="exit()" class="exit"><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="content">
+                <div class="main-chat">
+                    <div class="bot chat-user">
+                        <img src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
+                        <div class="chat-message">
+                            <p class="m-0">How can we help? We're here for you!</p>
+                        </div>
+                    </div>
+                    <div class="user chat-user">
+                        <img class="order-2" src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
+                        <div class="chat-message user-message order-1">
+                            <p class="m-0">How can we help? We're here for you!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <div class="list-messgae">
+                        <ul>
+                            <li><a class="sms" href="#">Refund</a></li>
+                            <li><a class="sms" href="#">My account</a></li>
+                            <li><a class="sms" href="#">Subsciption</a></li>
+                            <li><a class="sms" href="#">Assistance</a></li>
+                            <li><a class="sms" href="#">Inquiries</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <button onclick="chatBtn()"  class="chat-icon">
+            <img src="/assets/Vector.svg" alt="">
+        </button>
+    </div>
+
     <script src="/js/index.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
