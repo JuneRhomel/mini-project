@@ -268,6 +268,7 @@ header {
 // end partner
 
 .committed-section {
+    overflow: hidden;
     p {
         margin-top: 2em;
         font-size: 1.2em;
@@ -282,6 +283,7 @@ header {
 }
 // testimonial
 .testimonial {
+    overflow: hidden;
     .card-testimonial {
         background-color: var(---light-color);
         filter: drop-shadow(0px -1px 3px rgba(0, 0, 0, 0.25));
@@ -375,6 +377,8 @@ header {
 }
 // learn-more
 .learn-more-section {
+    
+    overflow: hidden;
     .div-vid {
         width: 100%;
         height: 30em;
@@ -462,6 +466,7 @@ header {
 
 // franchising-section
 .franchising-section {
+    overflow: hidden;
     border-top: 10px solid var(--primary-color);
     padding-top: 2em;
     .franchising-img {
@@ -563,7 +568,7 @@ ul {
 
 // message section
 .message-section {
-
+    overflow: hidden;
     ol {
         z-index: 9999;
     }
@@ -721,6 +726,7 @@ ul {
 
 // Subscribe
 .subscribe-section {
+    overflow: hidden;
     background-color: var(--second-bg-color);
     height: 20em;
     display: flex;
@@ -797,6 +803,7 @@ ul {
 
 // footer
 footer {
+    overflow: hidden;
     height: 30em;
     background-color: var(--primary-color);
     padding: 5em 0 1em 0;
