@@ -7,12 +7,11 @@
 }
 
 :root {
-  --primary-color: #00643C;
+  --primary-color: #007561;
   --bg-color: #EDE9D0;
   --second-bg-color: #cacaca6b;
   --btn-color: #F07C57;
   ---light-color: #FFFEF5;
-  --load-time: .8s;
 }
 
 h1 {
@@ -229,26 +228,44 @@ header {
   color: var(--btn-color);
 }
 
-.oreder-section button {
+.order-section button {
   border: none;
   background-color: transparent;
 }
-.oreder-section h3, .oreder-section p {
+.order-section h3,
+.order-section p {
   margin: 0;
   padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.order h3 {
+  margin-bottom: 1em;
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 .bg-order {
   background-color: var(---light-color);
   border-radius: 2em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  max-width: 50em;
+  border: 1px solid var(--primary-color);
   padding: 1em;
+}
+.bg-order h5 {
+  font-weight: 700;
+  color: var(--primary-color);
 }
 .bg-order table {
   width: 100%;
 }
-.bg-order th, .bg-order td {
+.bg-order th,
+.bg-order td {
   padding: 10px;
 }
 .bg-order th {
@@ -256,17 +273,16 @@ header {
   font-weight: 300;
   text-align: center;
 }
-.bg-order h3 {
-  font-size: 0.8em;
-  font-weight: 700;
-}
 .bg-order .product-img {
   background-color: var(--btn-color);
   border-radius: 18px;
   height: 100%;
-  min-width: 5em;
-  max-width: 10em;
   padding: 0.5em;
+  width: 100%;
+  max-width: 10em;
+}
+.bg-order .product-name {
+  min-width: 100px;
 }
 .bg-order .size {
   font-size: 13px;
@@ -292,7 +308,7 @@ header {
 }
 
 @media (min-width: 700px) {
-  .bg-order h3 {
+  .bg-order h5 {
     font-size: 1.2em;
   }
   .bg-order .size {
@@ -303,38 +319,176 @@ header {
     font-weight: 700;
   }
 }
+.delivery h3 {
+  margin-bottom: 1em;
+}
+.delivery .delivery-box-container {
+  row-gap: 0.5em;
+}
 .delivery .inside {
   background-color: var(---light-color);
   width: 100%;
-  padding: 1em 3em;
+  padding: 1em 1em 1em 4em;
   border-radius: 20px;
   cursor: pointer;
+  border: 1px solid var(--primary-color);
 }
-.delivery h3, .delivery h4 {
+.delivery h4 {
   font-weight: 700;
 }
 .delivery p {
   color: #7D7D7D;
   font-size: 0.8em;
 }
-.delivery button {
+.delivery input[type=radio] {
+  display: none;
+}
+.delivery label {
+  position: relative;
+  width: 100%;
+}
+.delivery label::before {
+  content: "";
+  background: url("/assets/check_circle_FILL0_wght400_GRAD0_opsz48.svg");
+  background-position: center;
+  background-size: contain;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 15px;
+  top: 40px;
+  transform: scale(0) rotateZ(180deg);
+  transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+.delivery input[type=radio]:checked + label::before {
+  transform: scale(1) rotateZ(0);
+}
+.delivery label::after {
+  content: "";
   border: 2px solid var(--primary-color);
-  width: 35px;
-  height: 35px;
-  padding: 2px;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  left: 14px;
+  top: 39px;
   border-radius: 50%;
-  font-size: 20px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.payment {
+  background-color: var(---light-color);
+  padding: 2em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: 1px solid var(--primary-color);
+}
+.payment h3 {
+  margin-bottom: 1em;
+}
+.payment .apply {
+  border: 2px solid var(--primary-color);
   color: var(--primary-color);
+  padding: 2px 1em;
+  font-weight: 700;
+}
+.payment .apply:hover {
+  background-color: var(--primary-color);
+  color: var(---light-color);
+}
+.payment .transaction-code,
+.payment .cupon {
+  padding-bottom: 1.5em;
+}
+.payment .cupon {
+  background-image: linear-gradient(to right, #00643C 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 60px 2px;
+  background-repeat: repeat-x;
+  margin-bottom: 1.5em;
+}
+.payment .order-summary {
+  padding-bottom: 0.5em;
+}
+.payment .total-amount {
+  padding-bottom: 1.5em;
+  background-image: linear-gradient(to right, #00643C 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 60px 2px;
+  background-repeat: repeat-x;
+  margin-bottom: 1em;
+}
+.payment .flex-space {
+  display: flex;
+  justify-content: space-between;
+}
+.payment .flex-space p {
+  color: #767676;
+}
+.payment .flex-space label {
+  font-weight: 700;
+}
+.payment .flex-space .input-coupon {
+  width: 13em;
+  height: 2em;
+}
+.payment .flex-space .input-coupon input {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 1em 0.2em;
+}
+.payment .timer {
+  background: rgba(0, 100, 60, 0.46);
+  padding: 1em;
+  border-radius: 20px;
   text-align: center;
+  font-weight: 700;
+  color: var(---light-color);
+}
+.payment .proceed-btn {
+  padding-top: 2em;
+  text-align: center;
+}
+.payment .proceed-btn button {
+  font-weight: 700;
+  background-color: var(--primary-color);
+  padding: 5px 30px;
+  width: 12em;
+  font-size: 1.5em;
+  border-radius: 20px;
+  color: var(---light-color);
+}
+
+.additional-service h3 {
+  margin-bottom: 1em;
+}
+.additional-service .service {
+  background-color: var(---light-color);
+  padding: 1em 2em;
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+}
+.additional-service .service p {
+  padding-top: 10px;
+  color: #767676;
+}
+.additional-service .service h4 {
+  font-weight: 700;
+}
+.additional-service p, .additional-service h4 {
+  margin: 0;
+  padding: 0;
 }
 
 footer {
+  margin-top: 2em;
   height: 30em;
   background-color: var(--primary-color);
   padding: 5em 0 1em 0;
 }
-footer ul, footer li, footer a {
+footer ul,
+footer li,
+footer a {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -437,7 +591,9 @@ footer p {
   background-color: var(--primary-color);
   color: var(---light-color);
 }
-.chat ul, .chat li, .chat a {
+.chat ul,
+.chat li,
+.chat a {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -468,14 +624,12 @@ footer p {
 .chat .content {
   padding: 1em 2em;
 }
-
-li:hover {
+.chat li:hover {
   background-color: var(--primary-color);
   color: var(---light-color);
   transition: 0.3s all;
 }
-
-li:hover .sms {
+.chat li:hover .sms {
   color: var(---light-color);
   transition: 0.3s all;
 }
@@ -499,4 +653,167 @@ li:hover .sms {
   .message-flex {
     flex-direction: row;
   }
+}
+.click-log-in {
+  display: none;
+}
+
+.log-in-fix {
+  display: none;
+  position: fixed;
+  background-color: rgba(114, 108, 108, 0.7215686275);
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-in {
+  position: relative;
+  border-top: 10px solid var(--primary-color);
+  z-index: 9999;
+  width: 100%;
+  max-width: 30em;
+  background-color: #FFFEF5;
+  box-shadow: 12px 14px 33px rgba(0, 0, 0, 0.41);
+  padding: 2em;
+  border-radius: 12px;
+}
+.log-in ul, .log-in li, .log-in a, .log-in p, .log-in h5 {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+.log-in .create-link {
+  color: var(--primary-color);
+}
+.log-in .link {
+  color: #726C6C;
+  font-size: 1.8em;
+}
+.log-in .link:hover {
+  color: var(--primary-color);
+}
+.log-in .forget {
+  display: block;
+  text-align: end;
+}
+.log-in .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+}
+.log-in .close-btn:hover {
+  color: red;
+  border: 1px solid red;
+}
+.log-in #submit-login {
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  padding: 10px 2em;
+  font-weight: 700;
+}
+.log-in form {
+  margin-top: 3em;
+}
+.log-in .create {
+  margin-top: 2em;
+  padding: 1em 0;
+  border-top: 1px solid var(--primary-color);
+}
+.log-in #email-error, .log-in #pasword-error {
+  color: red;
+  font-size: 14px;
+}
+
+.wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: var(--bg-color);
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before,
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before,
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: var(--btn-color);
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

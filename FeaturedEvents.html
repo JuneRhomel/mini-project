@@ -63,54 +63,54 @@
                 <div class="collapse 
                     navbar-collapse  
                     m-0 " id="navbarNav">
-                        <ul class="navbar-nav menu-nav 
+                    <ul class="navbar-nav menu-nav 
                         me-auto 
                         mb-2
                         gap-4 
                         mb-lg-0
                         text-center">
+                        <li class="nav-item">
+                            <a class="nav-link " href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link "  href="/OurMenu.html">Our Menu</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active-page" aria-current="page" href="/FeaturedEvents.html">Event</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Fanchising</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-lg-block nav-user">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
                             <li class="nav-item">
-                                <a class="nav-link"  href="/index.html">Home</a>
+                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                    <i class="fa-regular fa-heart fs-3"></i>
+                                    <samp>(0)</samp>
+                                </a>
+
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active-page" aria-current="page" href="/OurMenu.html">Our Menu</a>
-                            </li>
+
                             <li class="nav-item ">
-                                <a class="nav-link" href="#">Event</a>
+                                <a class="nav-link d-flex align-items-center gap-2" href="/order.html">
+                                    <i class="fa-solid fa-cart-shopping  fs-3"></i>
+                                    <samp>(0)</samp>
+                                </a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link " href="#">Contact</a>
+                                <a onclick="account()" href="#" class="p-0 nav-link d-flex align-items-center justify-content-center">
+                                    <img src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="#">Fanchising</a>
-                            </li>
+
                         </ul>
-
-                        <div class="d-lg-block nav-user">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-3">
-                                <li class="nav-item">
-                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                        <i class="fa-regular fa-heart fs-3"></i>
-                                        <samp>(0)</samp>
-                                    </a>
-
-                                </li>
-
-                                <li class="nav-item ">
-                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                        <i class="fa-solid fa-cart-shopping  fs-3"></i>
-                                        <samp>(0)</samp>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#" class="p-0 nav-link d-flex align-items-center justify-content-center">
-                                        <img src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -303,49 +303,91 @@
     </footer>
 
 <!-- pop up Message -->
-    <div class="message-flex">
-        <div class="chat" id="chat">
-            <div class="chat-head" >
-                <h5>Chat Assistance</h5>
-                <button onclick="exit()" class="exit"><i class="fa-solid fa-x"></i></button>
-            </div>
-            <div class="content">
-                <div class="main-chat">
-                    <div class="bot chat-user">
-                        <img src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
-                        <div class="chat-message">
-                            <p class="m-0">How can we help? We're here for you!</p>
-                        </div>
-                    </div>
-                    <div class="user chat-user">
-                        <img class="order-2" src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
-                        <div class="chat-message user-message order-1">
-                            <p class="m-0">How can we help? We're here for you!</p>
-                        </div>
+<!-- pop up Message -->
+<div class="message-flex">
+    <div class="chat" id="chat">
+        <div class="chat-head" >
+            <h5>Chat Assistance</h5>
+            <button onclick="exit()" class="exit"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <div class="content">
+            <div class="main-chat">
+                <div class="bot chat-user">
+                    <img src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
+                    <div class="chat-message">
+                        <p class="m-0">How can we help? We're here for you!</p>
                     </div>
                 </div>
-                <div class="chat-footer">
-                    <div class="list-messgae">
-                        <ul>
-                            <li><a class="sms" href="#">Refund</a></li>
-                            <li><a class="sms" href="#">My account</a></li>
-                            <li><a class="sms" href="#">Subsciption</a></li>
-                            <li><a class="sms" href="#">Assistance</a></li>
-                            <li><a class="sms" href="#">Inquiries</a></li>
-                        </ul>
+                <div class="user chat-user">
+                    <img class="order-2" src="/assets/photo-1438761681033-6461ffad8d80 1.png" alt="">
+                    <div class="chat-message user-message order-1">
+                        <p class="m-0">How can we help? We're here for you!</p>
                     </div>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <div class="list-messgae">
+                    <ul>
+                        <li><a class="sms" href="#">Refund</a></li>
+                        <li><a class="sms" href="#">My account</a></li>
+                        <li><a class="sms" href="#">Subsciption</a></li>
+                        <li><a class="sms" href="#">Assistance</a></li>
+                        <li><a class="sms" href="#">Inquiries</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    
-        <button onclick="chatBtn()"  class="chat-icon">
-            <img src="/assets/Vector.svg" alt="">
-        </button>
     </div>
 
-    <script src="/js/index.js"></script>
+    <button onclick="chatBtn()"  class="chat-icon">
+        <img src="/assets/Vector.svg" alt="">
+    </button>
+</div>
+
+<div class="click-log-in">
+    <div class="log-in-fix">
+        <div class="log-in">
+            <button class="close-btn" onclick="close_btn()"><i class="fa-solid fa-x"></i></button>
+            <h4>LOG IN TO YOUR ACCOUNT</h4>
+        <form id="form" action="#">
+            <div>
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emil" placeholder="name@example.com" >
+                <i id="email-error"></i>
+            </div>
+    
+            <div class="pt-3">
+                <label for="Password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" >
+                <i id="pasword-error"></i>
+                <a class="forget" href="#">Forget ?</a>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+                <div class="login-btn">
+                    <button id="submit-login"  type="submit">Log In</button>
+                </div>
+                <div>
+                    <ul class="d-flex gap-5">
+                        <li><a class="link" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a class="link" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a class="link" href="#"><i class="fa-brands fa-google"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+            <div class="create">
+                <p>Don’t have account yet?</p>
+                <h5><a  class="create-link" href="#">Create an account</a> </h5>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
+
+<script src="/js/index.js"></script>
 </body>
 </html>
