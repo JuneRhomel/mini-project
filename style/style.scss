@@ -231,6 +231,8 @@ header {
 
 // partner section
 .partner-section {
+    border-top: 2px solid var(--primary-color);
+    padding-top: 3em;
     animation: partner-loading 2s forwards;
 
     .container {

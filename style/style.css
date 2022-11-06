@@ -278,6 +278,8 @@ header {
   }
 }
 .partner-section {
+  border-top: 2px solid var(--primary-color);
+  padding-top: 3em;
   -webkit-animation: partner-loading 2s forwards;
           animation: partner-loading 2s forwards;
 }

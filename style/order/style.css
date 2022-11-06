@@ -481,6 +481,7 @@ header {
 }
 
 footer {
+  overflow: hidden;
   margin-top: 2em;
   height: 30em;
   background-color: var(--primary-color);
