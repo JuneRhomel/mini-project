@@ -21,7 +21,7 @@ h1 {
 }
 
 section {
-  margin-top: 3em;
+  padding-bottom: 8em;
 }
 
 h2,
@@ -211,7 +211,8 @@ header {
 
 .hero-section {
   overflow: hidden;
-  height: 85vh;
+  height: 90vh;
+  padding-bottom: 4em;
   position: relative;
   background: linear-gradient(180deg, #007561 0%, rgba(0, 117, 97, 0) 96.31%);
 }
@@ -381,49 +382,17 @@ header {
 }
 
 .testimonial-section .container-testimonial {
-  overflow: hidden;
   width: 100%;
 }
 
 .testimonial {
+  overflow: auto;
   position: relative;
   padding: 2em;
   display: flex;
-  width: 350%;
-  gap: 2em;
-  -webkit-animation: 50s testimonial-slide infinite;
-          animation: 50s testimonial-slide infinite;
+  gap: 1em;
 }
 
-@-webkit-keyframes testimonial-slide {
-  0% {
-    left: 0;
-  }
-  25% {
-    left: -50%;
-  }
-  25% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
-}
-
-@keyframes testimonial-slide {
-  0% {
-    left: 0;
-  }
-  25% {
-    left: -50%;
-  }
-  25% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
-}
 .learn-more-section {
   overflow: hidden;
 }
@@ -505,6 +474,13 @@ header {
   overflow: hidden;
   border-top: 10px solid var(--primary-color);
   padding-top: 2em;
+}
+.franchising-section h2 {
+  font-size: 2.2em;
+}
+.franchising-section p {
+  font-size: 1.3em;
+  margin-top: 2em;
 }
 .franchising-section .franchising-img {
   width: 50%;

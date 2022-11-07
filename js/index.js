@@ -34,6 +34,10 @@ errorForm.addEventListener ("submit", function(e){
         passwordlError.innerHTML = "Your password is too long";
         e.preventDefault();
     }
+    if (password.value === "1234567" ) {
+        passwordlError.innerHTML = "Password 1234567 is not accepted";
+        e.preventDefault();
+    }
     
 });
 
