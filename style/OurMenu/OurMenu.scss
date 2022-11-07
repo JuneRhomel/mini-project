@@ -290,7 +290,11 @@ header {
     }
 
 }
-
+@media only screen and (min-width: 769px) {
+    .hero {
+        height: 70vh;
+    }
+}
 
 #slider {
     overflow: hidden;
