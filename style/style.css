@@ -18,6 +18,7 @@
 h1 {
   font-family: "Insaniburger";
   font-size: 81px;
+  color: var(---light-color);
 }
 
 section {
