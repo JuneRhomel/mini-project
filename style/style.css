@@ -21,10 +21,6 @@ h1 {
   color: var(---light-color);
 }
 
-section {
-  padding-bottom: 8em;
-}
-
 h2,
 span {
   font-family: "Insaniburger";
@@ -211,79 +207,91 @@ header {
 }
 
 .hero-section {
-  overflow: hidden;
-  height: 90vh;
-  padding-bottom: 4em;
   position: relative;
-  background: linear-gradient(180deg, #007561 0%, rgba(0, 117, 97, 0) 96.31%);
+  background: linear-gradient(180deg, #007561 1.63%, rgba(0, 117, 97, 0) 258.13%);
+  height: 90vh;
+  -webkit-animation: heroLoad 2.4s ease-in;
+          animation: heroLoad 2.4s ease-in;
 }
-
-.text-hero {
-  width: 735px;
-  z-index: 2;
+.hero-section .text-hero {
+  max-width: 30em;
+  height: 100%;
 }
-
-.background-img {
-  margin-top: 2em;
-  position: absolute;
+.hero-section .img-hero {
+  max-width: 40em;
+  height: 100%;
+}
+.hero-section .img-hero img {
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-}
-.background-img img {
-  max-width: 80em;
-  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  transform: translateX(-20%);
 }
-
-.text-center-div {
-  text-align: center;
-  width: 20em;
+.hero-section p {
+  font-size: 1.3em;
+  color: #3C3C3C;
 }
-
-.arrow {
-  height: 2em;
-  -webkit-animation: arrow 900ms linear infinite;
-          animation: arrow 900ms linear infinite;
+.hero-section .btn-div {
+  z-index: 3;
 }
-
+.hero-section .arrow {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero-section .arrow img {
+  height: 3em;
+  -webkit-animation: arrow 1000ms linear infinite;
+          animation: arrow 1000ms linear infinite;
+}
 @-webkit-keyframes arrow {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-30%);
+    transform: translateY(-40%);
   }
   100% {
     transform: translateY(0);
   }
 }
-
 @keyframes arrow {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-30%);
+    transform: translateY(-40%);
   }
   100% {
     transform: translateY(0);
   }
 }
-@media (min-width: 850px) {
-  .background-img img {
-    transform: translateX(0);
+@-webkit-keyframes heroLoad {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
+@keyframes heroLoad {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
 .partner-section {
-  border-top: 2px solid var(--primary-color);
-  padding-top: 3em;
-  -webkit-animation: partner-loading 2s forwards;
-          animation: partner-loading 2s forwards;
+  border-top: 6px solid var(--primary-color);
+  padding: 6em;
+  margin-bottom: 2em;
 }
 .partner-section .container p {
   font-size: 1em;
@@ -293,27 +301,6 @@ header {
   width: 5em;
 }
 
-@-webkit-keyframes partner-loading {
-  from {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-            clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-  }
-  to {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  }
-}
-
-@keyframes partner-loading {
-  from {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-            clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-  }
-  to {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  }
-}
 @media (min-width: 1200px) {
   .partner-section .container .partner img {
     width: 8em;
@@ -321,6 +308,7 @@ header {
 }
 .committed-section {
   overflow: hidden;
+  margin-bottom: 9em;
 }
 .committed-section p {
   margin-top: 2em;
@@ -336,6 +324,7 @@ header {
 }
 
 .testimonial {
+  margin-bottom: 5em;
   overflow: hidden;
 }
 .testimonial .card-testimonial {
@@ -395,6 +384,7 @@ header {
 }
 
 .learn-more-section {
+  margin-bottom: 4em;
   overflow: hidden;
 }
 .learn-more-section .div-vid {
@@ -475,6 +465,7 @@ header {
   overflow: hidden;
   border-top: 10px solid var(--primary-color);
   padding-top: 2em;
+  margin-bottom: 7em;
 }
 .franchising-section h2 {
   font-size: 2.2em;
@@ -574,7 +565,7 @@ ul {
 }
 
 .message-section {
-  overflow: hidden;
+  margin-bottom: 5em;
 }
 .message-section ol {
   z-index: 9999;

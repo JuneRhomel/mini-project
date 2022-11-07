@@ -19,10 +19,6 @@ h1 {
   font-size: 81px;
 }
 
-section {
-  margin-top: 3em;
-}
-
 h2,
 h3,
 h4,
@@ -290,10 +286,11 @@ header {
 }
 
 .hero {
-  -webkit-animation: hero-loading 8s forwards;
-          animation: hero-loading 8s forwards;
   margin-bottom: 2em;
-  height: 40em;
+  height: 90vh;
+}
+.hero .carousel-hero {
+  height: 100%;
 }
 .hero .d-flex {
   row-gap: 2em;
@@ -308,27 +305,6 @@ header {
   max-width: 35em;
 }
 
-@-webkit-keyframes hero-loading {
-  from {
-    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 99%);
-            clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 99%);
-  }
-  to {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  }
-}
-
-@keyframes hero-loading {
-  from {
-    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 99%);
-            clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 99%);
-  }
-  to {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  }
-}
 #slider {
   overflow: hidden;
 }
@@ -411,49 +387,32 @@ header {
 .timer-section {
   padding: 2em 0;
   background-color: var(--btn-color);
-  -webkit-animation: timer-section 2.5s forwards;
-          animation: timer-section 2.5s forwards;
 }
 .timer-section h4 {
   font-size: 2em;
   color: var(--primary-color);
 }
 .timer-section h3 {
-  font-size: 4em;
+  font-size: 3em;
 }
 .timer-section .time-text {
   color: var(--primary-color);
   font-family: "Insaniburger";
-  font-size: 3em;
-}
-@-webkit-keyframes timer-section {
-  from {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-            clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-  }
-  to {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  }
-}
-@keyframes timer-section {
-  from {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-            clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-  }
-  to {
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  }
+  font-size: 2em;
 }
 
+.product-section {
+  margin-top: 6em;
+}
 .product-section h2 {
   color: var(--primary-color);
 }
 .product-section .category {
   margin-top: 2em;
 }
-.product-section ul, .product-section li, .product-section a {
+.product-section ul,
+.product-section li,
+.product-section a {
   list-style: none;
   text-decoration: none;
   padding: 0;
@@ -531,7 +490,9 @@ footer {
   background-color: var(--primary-color);
   padding: 5em 0 1em 0;
 }
-footer ul, footer li, footer a {
+footer ul,
+footer li,
+footer a {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -634,7 +595,9 @@ footer p {
   background-color: var(--primary-color);
   color: var(---light-color);
 }
-.chat ul, .chat li, .chat a {
+.chat ul,
+.chat li,
+.chat a {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -723,7 +686,11 @@ footer p {
   padding: 2em;
   border-radius: 12px;
 }
-.log-in ul, .log-in li, .log-in a, .log-in p, .log-in h5 {
+.log-in ul,
+.log-in li,
+.log-in a,
+.log-in p,
+.log-in h5 {
   list-style: none;
   text-decoration: none;
   padding: 0;
@@ -774,7 +741,8 @@ footer p {
   padding: 1em 0;
   border-top: 1px solid var(--primary-color);
 }
-.log-in #email-error, .log-in #pasword-error {
+.log-in #email-error,
+.log-in #pasword-error {
   color: red;
   font-size: 14px;
 }/*# sourceMappingURL=OurMenu.css.map */

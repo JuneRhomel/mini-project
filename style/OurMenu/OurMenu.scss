@@ -19,15 +19,13 @@ h1 {
     font-family: 'Insaniburger';
     font-size: 81px;
 }
-section {
-    margin-top: 3em;
-}
+
 h2,
 h3,
 h4,
 span {
     font-family: 'Insaniburger';
-    
+
 }
 
 span {
@@ -37,6 +35,7 @@ span {
 .bg-color {
     background: #EDE9D0;
 }
+
 .button-52 {
     font-size: 16px;
     font-weight: 200;
@@ -167,7 +166,7 @@ header {
     overflow: hidden;
 }
 
-.navbar-brand  {
+.navbar-brand {
     animation: navbar-brand;
     animation-duration: 1.2s;
     animation-timing-function: ease-in;
@@ -182,11 +181,13 @@ header {
         transform: translateX(-200%);
         opacity: 0;
     }
+
     100% {
-        transform:  translateX(0);
+        transform: translateX(0);
         opacity: 1;
     }
 }
+
 .menu-nav {
     animation: menu-nav;
     animation-duration: .5s;
@@ -195,10 +196,12 @@ header {
     animation-fill-mode: forwards;
     opacity: 0;
 }
+
 @keyframes menu-nav {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -213,16 +216,19 @@ header {
     transform: translateX(300%);
     opacity: 0;
 }
+
 @keyframes nav-user {
     0% {
         opacity: 0;
         transform: translateX(300%);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
+
 // end loading
 
 
@@ -240,27 +246,31 @@ header {
 
     .link:hover {
         color: var(--btn-color);
-        
+
     }
 
     .link:focus {
         color: var(--btn-color);
         font-weight: 700;
     }
-    .active-page  {
-        color: var(--btn-color) ;
+
+    .active-page {
+        color: var(--btn-color);
     }
 
 }
+
 // end navigation
 
 
 // carousel
 
 .hero {
-    animation: hero-loading 8s forwards;
     margin-bottom: 2em;
-    height: 40em;
+    height: 90vh;
+    .carousel-hero {
+        height: 100%;
+    }
     .d-flex {
         row-gap: 2em;
     }
@@ -280,16 +290,11 @@ header {
     }
 
 }
-@keyframes hero-loading {
-    from {
-        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 99%);
-    }
-    to {
-        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-    }
-}
+
+
 #slider {
     overflow: hidden;
+    
 }
 
 #slider figure {
@@ -302,6 +307,7 @@ header {
     left: 0;
     animation: 15s slider infinite;
 }
+
 .text-hero {
     max-width: 30em;
 }
@@ -350,32 +356,26 @@ header {
 .timer-section {
     padding: 2em 0;
     background-color: var(--btn-color);
-    animation: timer-section 2.5s forwards;
+
     h4 {
         font-size: 2em;
         color: var(--primary-color);
     }
+
     h3 {
-        font-size: 4em;
-    }
-    .time-text {
-        color: var(--primary-color);
-        font-family: 'Insaniburger';
         font-size: 3em;
     }
 
-
-    @keyframes timer-section {
-        from {
-            clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-        }
-        to {
-            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-        }
+    .time-text {
+        color: var(--primary-color);
+        font-family: 'Insaniburger';
+        font-size: 2em;
     }
 }
+
 // product-section 
 .product-section {
+    margin-top: 6em;
 
     h2 {
         color: var(--primary-color);
@@ -384,12 +384,16 @@ header {
     .category {
         margin-top: 2em;
     }
-    ul,li,a {
+
+    ul,
+    li,
+    a {
         list-style: none;
         text-decoration: none;
         padding: 0;
         margin: 0;
     }
+
     a {
         font-size: 1.4em;
         color: rgb(94, 94, 94);
@@ -400,6 +404,7 @@ header {
         font-weight: 700;
         border-bottom: 1px solid var(--primary-color);
     }
+
     .active {
         color: var(--primary-color);
         font-weight: 700;
@@ -413,12 +418,14 @@ header {
     border-radius: 1em;
     padding: 1em;
     transition: .3s ease-in-out;
+
     .bg-product {
         background-color: var(--btn-color);
         width: 100%;
         border-radius: 0px 139px 0px 43px;
         height: 20em;
     }
+
     .wishlist {
         font-size: 1.8em;
     }
@@ -429,32 +436,39 @@ header {
         object-fit: contain;
         transition: .3s all;
     }
+
     p {
         margin: 0;
         padding: 0;
     }
-    h5{
+
+    h5 {
         font-weight: 700;
         font-size: 1.5em;
     }
+
     .sold {
         color: #5b5b5b;
         font-size: .8em;
     }
+
     .prize {
         color: var(--primary-color);
         font-weight: 700;
         font-size: 1.3em;
     }
 }
+
 .box-product:hover {
     border: 3px solid var(--primary-color);
     transition: .3s all;
 }
-.box-product:hover  img{
+
+.box-product:hover img {
     transform: rotate(30deg);
     transition: .3s all;
 }
+
 //END product-section 
 
 // footer
@@ -463,29 +477,36 @@ footer {
     height: 30em;
     background-color: var(--primary-color);
     padding: 5em 0 1em 0;
-    
-    ul,li, a {
+
+    ul,
+    li,
+    a {
         margin: 0;
         padding: 0;
         list-style: none;
         text-decoration: none;
-        
+
     }
+
     a {
         color: var(--bg-color);
         font-size: 15px;
     }
+
     a:hover {
         color: var(--btn-color);
     }
+
     h3 {
         font-size: 20px;
         color: var(--bg-color);
         margin-bottom: 1em;
     }
+
     img {
         width: 60px;
     }
+
     p {
         color: var(--bg-color);
     }
@@ -493,15 +514,18 @@ footer {
 }
 
 @media (min-width: 992px) {
-    footer{
+    footer {
         height: auto;
         padding-top: 4em;
+
         h3 {
             font-size: 2em;
         }
+
         img {
             width: 90px;
         }
+
         .center {
             margin-right: 2em;
         }
@@ -520,6 +544,7 @@ footer {
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .chat {
     display: none;
     border-radius: 36px;
@@ -527,6 +552,7 @@ footer {
     width: 25em;
     background-color: var(---light-color);
     box-shadow: 12px 14px 33px rgba(0, 0, 0, 0.41);
+
     .chat-head {
         position: relative;
         background-color: var(--primary-color);
@@ -535,10 +561,12 @@ footer {
         text-align: center;
         font-weight: 700;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
         h5 {
             margin: 0;
             font-size: 1.4em;
         }
+
         .exit {
             position: absolute;
             background-color: transparent;
@@ -549,34 +577,43 @@ footer {
             color: var(---light-color);
         }
     }
+
     .main-chat {
         margin-top: 2em;
+
         .chat-user {
             display: flex;
             align-items: center;
             gap: 1em;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
             .chat-message {
                 background-color: var(--bg-color);
                 padding: 1em;
                 border-radius: 1.2em;
             }
         }
+
         .user {
             margin-top: 1.3em;
             justify-content: end;
-            .user-message  {
+
+            .user-message {
                 background-color: var(--primary-color);
                 color: var(---light-color);
             }
         }
     }
-    ul,li,a {
+
+    ul,
+    li,
+    a {
         list-style: none;
         text-decoration: none;
         margin: 0;
         padding: 0;
     }
+
     .list-messgae {
         border-top: 2px solid var(--primary-color);
         margin-top: 1em;
@@ -584,29 +621,35 @@ footer {
         display: flex;
         justify-content: end;
     }
+
     ul {
         display: flex;
         justify-content: end;
         gap: .3em;
         flex-wrap: wrap;
+
         li {
             border: 1px solid var(--primary-color);
             padding: 3px 1.7em;
             border-radius: 1.5em;
             transition: .3s ease-in-out;
+
             a {
                 color: var(--primary-color);
             }
         }
     }
+
     .content {
-        padding: 1em 2em; 
+        padding: 1em 2em;
     }
+
     li:hover {
         background-color: var(--primary-color);
         color: var(---light-color);
         transition: .3s all;
     }
+
     li:hover .sms {
         color: var(---light-color);
         transition: .3s all;
@@ -630,10 +673,12 @@ footer {
     .chat {
         width: 35em;
     }
-    .message-flex  {
+
+    .message-flex {
         flex-direction: row;
     }
 }
+
 //end
 
 // log in
@@ -653,7 +698,8 @@ footer {
     justify-content: center;
     align-items: center;
 }
-.log-in  {
+
+.log-in {
     position: relative;
     border-top: 10px solid var(--primary-color);
     z-index: 9999;
@@ -664,26 +710,35 @@ footer {
     padding: 2em;
     border-radius: 12px;
 
-    ul,li, a , p, h5 {
+    ul,
+    li,
+    a,
+    p,
+    h5 {
         list-style: none;
         text-decoration: none;
         padding: 0;
         margin: 0;
-    } 
+    }
+
     .create-link {
         color: var(--primary-color);
     }
+
     .link {
         color: #726C6C;
         font-size: 1.8em;
     }
+
     .link:hover {
         color: var(--primary-color);
     }
+
     .forget {
         display: block;
         text-align: end;
     }
+
     .close-btn {
         position: absolute;
         right: 20px;
@@ -696,6 +751,7 @@ footer {
         width: 35px;
         text-align: center;
     }
+
     .close-btn:hover {
         color: red;
         border: 1px solid red;
@@ -705,18 +761,22 @@ footer {
         background-color: var(--primary-color);
         border: none;
         color: #fff;
-        padding: 10px 2em ;
+        padding: 10px 2em;
         font-weight: 700;
     }
+
     form {
         margin-top: 3em;
     }
+
     .create {
         margin-top: 2em;
         padding: 1em 0;
         border-top: 1px solid var(--primary-color);
     }
-    #email-error,#pasword-error {
+
+    #email-error,
+    #pasword-error {
         color: red;
         font-size: 14px;
     }
