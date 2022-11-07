@@ -919,14 +919,12 @@ footer p {
 .chat .content {
   padding: 1em 2em;
 }
-
-li:hover {
+.chat li:hover {
   background-color: var(--primary-color);
   color: var(---light-color);
   transition: 0.3s all;
 }
-
-li:hover .sms {
+.chat li:hover .sms {
   color: var(---light-color);
   transition: 0.3s all;
 }

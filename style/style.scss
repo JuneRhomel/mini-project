@@ -958,17 +958,18 @@ footer {
     .content {
         padding: 1em 2em; 
     }
+    li:hover {
+        background-color: var(--primary-color);
+        color: var(---light-color);
+        transition: .3s all;
+    }
+    li:hover .sms {
+        color: var(---light-color);
+        transition: .3s all;
+    }
 }
 
-li:hover {
-    background-color: var(--primary-color);
-    color: var(---light-color);
-    transition: .3s all;
-}
-li:hover .sms {
-    color: var(---light-color);
-    transition: .3s all;
-}
+
 .message-flex {
     display: flex;
     flex-direction: column;
