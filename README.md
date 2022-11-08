@@ -1,4 +1,3 @@
-# mini-project
-
-PUFF TEA
+# PUFF TEA
+KodeGo Mini Project
 https://pufftea.pages.dev/
