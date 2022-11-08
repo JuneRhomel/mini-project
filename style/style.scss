@@ -152,17 +152,18 @@ header {
         text-decoration: none;
     }
 
-    .link:hover {
+    .nav-link:hover {
         color: var(--btn-color);
         
     }
 
-    .link:focus {
+    .nav-link:focus {
         color: var(--btn-color);
         font-weight: 700;
     }
     .active-page  {
         color: var(--btn-color) ;
+        font-weight: 700;
     }
 
 }
@@ -995,7 +996,6 @@ footer {
 .log-in-fix {
     display: none;
     position: fixed;
-    background-color: #726c6cb8;
     z-index: 9999;
     top: 0;
     width: 100%;
@@ -1003,10 +1003,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+background: rgba(255, 255, 255, 0);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.5px);
+-webkit-backdrop-filter: blur(2.5px);
 }
 .log-in  {
     position: relative;
-    border-top: 10px solid var(--primary-color);
+    border-top: 10px solid var(--btn-color);
     z-index: 9999;
     width: 100%;
     max-width: 30em;
@@ -1014,8 +1018,10 @@ footer {
     box-shadow: 12px 14px 33px rgba(0, 0, 0, 0.41);
     padding: 2em;
     border-radius: 12px;
-
-    ul,li, a , p, h5 {
+    h4 {
+        font-weight: 700;
+    }
+    ul,li, a , p, h4 {
         list-style: none;
         text-decoration: none;
         padding: 0;
